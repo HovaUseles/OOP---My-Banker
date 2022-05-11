@@ -104,7 +104,6 @@ namespace OOP___My_Banker
             }
         }
 
-        //protected abstract string GenCardNumber();
         
         /// <summary>
         /// Generates a card number based on cardtype prefixes and max number char length.
