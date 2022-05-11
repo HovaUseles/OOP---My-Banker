@@ -50,6 +50,10 @@ namespace OOP___My_Banker
             }
 
         }
+
+        /// <summary>
+        /// Menu with the main actions of the program
+        /// </summary>
         public void MainMenu()
         {
             bool looper = true;
@@ -71,6 +75,9 @@ namespace OOP___My_Banker
             }
         }
 
+        /// <summary>
+        /// Displays all cards linked to the active customer.
+        /// </summary>
         private void ChooseCard()
         {
             bool looper = true;
@@ -96,6 +103,10 @@ namespace OOP___My_Banker
             }
         }
 
+        /// <summary>
+        /// Menu to choose how much to withdraw from an Account linked to a Credit Card
+        /// </summary>
+        /// <param name="card"></param>
         private void WithdrawMenu(CreditCard card)
         {
             bool looper = true;
@@ -134,6 +145,9 @@ namespace OOP___My_Banker
             }
         }
 
+        /// <summary>
+        /// Displays the accounts linked to the customer
+        /// </summary>
         private void AccountMenu()
         {
             Console.Clear();
@@ -153,6 +167,10 @@ namespace OOP___My_Banker
 
         }
 
+        /// <summary>
+        /// Display customer to the console
+        /// </summary>
+        /// <param name="customer"></param>
         private void DisplayCustomer(Customer customer)
         {
             Console.Write("{0}, Age: {1}, Accounts: {2}, Cards: {3}\n",
@@ -163,6 +181,10 @@ namespace OOP___My_Banker
                 );
         }
 
+        /// <summary>
+        /// Display card to the console
+        /// </summary>
+        /// <param name="card"></param>
         private void DisplayCard(CreditCard card)
         {
             Console.Write(
@@ -173,6 +195,10 @@ namespace OOP___My_Banker
                 );
         }
 
+        /// <summary>
+        /// Display account to the console
+        /// </summary>
+        /// <param name="account"></param>
         private void DisplayAccount(Account account)
         {
             Console.Write(
@@ -182,6 +208,10 @@ namespace OOP___My_Banker
                 $"  Cards: {account.KnownCards.Count}\n");
         }
 
+        /// <summary>
+        /// Checks if the input was a digit and returns it if was
+        /// </summary>
+        /// <returns>A 16-bit signed integer if the input is a number</returns>
         private int KeyChoice()
         {
             ConsoleKeyInfo chosen = Console.ReadKey(true);
@@ -199,6 +229,9 @@ namespace OOP___My_Banker
             }
         }
 
+        /// <summary>
+        /// Informs the console user the input was wrong
+        /// </summary>
         private void WrongInput()
         {
             Console.Clear();
@@ -206,6 +239,9 @@ namespace OOP___My_Banker
             PressToContinue();
         }
 
+        /// <summary>
+        /// Prompts the user to press any button to continue.
+        /// </summary>
         private void PressToContinue()
         {
             Console.WriteLine("\nPress any button to continue..");
