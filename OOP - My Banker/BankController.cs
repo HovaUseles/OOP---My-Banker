@@ -19,7 +19,6 @@ namespace OOP___My_Banker
         }
 
         private FileHandler fileHandler;
-        private CardTypeEnum cardType;
         /// <summary>
         /// Inializes an instance of the controller.
         /// </summary>
@@ -28,7 +27,6 @@ namespace OOP___My_Banker
         {
             RegNumber = regNr;
             fileHandler = new FileHandler("G:\\Mit drev\\Skole\\ZBC - Data og Kommunikation\\Hovedforløb 2\\repos\\OOP - My Banker\\OOP - My Banker\\NameFiles\\");
-            cardType = new CardTypeEnum();
         }
 
         /// <summary>
@@ -162,7 +160,7 @@ namespace OOP___My_Banker
                 {
                     int cardType = random.Next(0, 4);
                     CreditCard card = CreateCard(cardType, customer.GetFullName(), customer.Accounts[i].AccountNumber);
-                    customer.Accounts[i].LinkCard(card.CardNumber);
+                    LinkCardToAccount(card, customer.Accounts[i]);
                     customer.ReceiveCreditCard(card);
                 }
             }
@@ -236,6 +234,11 @@ namespace OOP___My_Banker
             return true;
         }
 
+        /// <summary>
+        /// Returns a string of which type the card is.
+        /// </summary>
+        /// <param name="card">Card to test card type</param>
+        /// <returns>The card type as string</returns>
         public string GetCardType(CreditCard card)
         {
             if (card is DebitCard) { return "DebitCard"; }

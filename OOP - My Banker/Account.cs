@@ -90,11 +90,19 @@ namespace OOP___My_Banker
             return rngString;
         }
 
+        /// <summary>
+        /// Links a card number to known account cards
+        /// </summary>
+        /// <param name="cardNumber"></param>
         public void LinkCard(string cardNumber)
         {
             knownCards.Add(cardNumber);
         }
 
+        /// <summary>
+        /// Substract an amount from the account balance
+        /// </summary>
+        /// <param name="amount"></param>
         public void Withdraw(double amount)
         {
             balance -= amount;
