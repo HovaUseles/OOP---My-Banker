@@ -110,7 +110,7 @@ namespace OOP___My_Banker
         /// Generates a card number based on cardtype prefixes and max number char length.
         /// </summary>
         /// <returns>Returns a string of the generated card number</returns>
-        protected string GenCardNumber()
+        private string GenCardNumber()
         {
             Random random = new Random();
             string cardNumber = string.Empty;
